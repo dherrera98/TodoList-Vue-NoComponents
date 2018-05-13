@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+.btn {
+  color: white;
+  cursor: pointer;
+  border-style: none;
+  border-radius: 2px;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  height: 40px;
+  padding: 8px 16px;
+  margin-bottom: 5px;
+}
+
+.btn:hover {
+  filter: brightness(0.9);
+}
+
+@media (max-width: 480px) {
+  .btn {
+    height: 26px;
+    width: 26px;
+    padding: 4px 8px;
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+}
+
+.bg-green {
+  background-color: #4CAF50;
+}
+
+.bg-blue {
+  background-color: #2196F3;
+}
+
+.bg-red {
+  background-color: #F44336;
+}
+
+.bg-orange {
+  background-color: #FF5722;
+}
+
+.bg-pink {
+  background-color: #FF4081;
+}
+
+.bg-yellow {
+  background-color: #FFEB3B;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1E1E1E;
+}
+
+header {
+  width: 100%;
+  background-color: whitesmoke;
+  height: 50px;
+  position: fixed;
+  border-bottom: 5px solid #098E40;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 36px;
+  line-height: 50px;
+  margin: 0;
+  color: #0D8565;
+}
+
+.tareas {
+  margin-bottom: 35px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+ul li {
+  width: 80vw;
+  height: 40px;
+  border: 1px solid black;
+  box-shadow: 1px 1px 6px rgba(39, 39, 39, 0.473);
+  font-size: 36px;
+  margin-bottom: 15px;
+  padding: 10px 35px;
+  color: #1E1E1E;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 480px) {
+  ul li {
+    width: 75vw;
+    font-size: 18px;
+    height: 22px;
+    padding: 10px 16px;
+  }
+}
+
+.completada {
+  text-decoration-line: line-through;
+  color: #6E6E6E;
+}
+
+.anadirTarea {
+  text-align: center;
+}
+
+input {
+  width: 40vw;
+  height: 50px;
+  font-size: 24px;
+  margin-bottom: 30px;
+  margin-top: 85px;
+  transition: 0.3s linear;
+  padding-left: 15px;
+}
+
+@media (max-width: 480px) {
+  input {
+    font-size: 22px;
+  }
+}
+
+input:focus {
+  width: 80vw;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  height: 30px;
+  bottom: 0;
+  background-color: whitesmoke;
+  border-top: 3px solid #098E40;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+footer p {
+  margin: 0 15px;
+  color: #05503c;
+}
+
+@media (max-width: 480px) {
+  footer {
+    font-size: 12px;
+    justify-content: space-around;
+  }
+}
+
+.slide-fade-enter-active {
+  transition: all .3s linear;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-leave-to {
+  transform: translateX(100px);
+  opacity: 0;
+}
+
+.slide-fade-enter {
+  transform: translateX(-100px);
+  opacity: 0;
+}
+/*# sourceMappingURL=main.css.map */

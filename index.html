@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1 v-once>{{titulo}}</h1>
+        </header>
+        <div class="anadirTarea">
+            <input type="text" v-model="inputNuevo" @keyup.enter="anadir()" placeholder="Nueva tarea" :maxlength="max">
+        </div>
+
+        <div class="tareas">
+            <ul>
+                <transition-group name="slide-fade">                            
+                    <li v-for="(tarea, key) in tareas" :key="key">
+                        <span :class="{completada: tarea.completada}">{{tarea.nombre | upperCase }}</span>
+                        <div>
+                            <button class="btn bg-green" @click="completarTarea(key)">V</button>
+                            <button class="btn bg-red" @click="eliminarTarea(key)">X</button>
+                        </div>
+                    </li>
+                </transition-group>
+            </ul>
+        </div>
+        <footer>
+            <p>Totales: <span>{{total}}</span></p>
+            <p>Sin completar: <span>{{sinCompletar}}</span></p>
+            <p>Completadas: <span>{{completada}}</span></p>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
